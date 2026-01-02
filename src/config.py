@@ -7,7 +7,7 @@ cleaned_transactions = project_root / "data" / "cleaned" / "cleaned_transactions
 
 reports_dir = project_root / "data" / "reports"
 monthly_summary = reports_dir / "monthly_summary.json"
-category_breakdown = reports_dir / "category_breakdown.json"
+
 
 
 
