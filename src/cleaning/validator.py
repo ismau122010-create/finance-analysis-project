@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Any
 
-REQUIRED_KEYS = {"date", "amount","category", "description"}
+REQUIRED_KEYS = {"date", "amount","category", "description", "merchant"}
 
 def _is_valid_date(date_str):
     try:
@@ -28,7 +28,7 @@ def validate_and_clean(transactions):
         date = str(t["date"]).strip()    # turn the date to a string and remove any spaces.
         category = str(t["category"]).strip().lower()   # turn category to string and must be lower cases and without any spaces. 
         description = str(t["description"]).strip()       # simalr concept above
-
+        mercahnt = str(t["merchant"]).strip()
 
        # amount must be a number 
         try:
@@ -47,6 +47,7 @@ def validate_and_clean(transactions):
            "amount": round(amount,2),
            "category": category,
            "description": description,
+           "merchant": mercahnt,
         }
         )
     return cleaned

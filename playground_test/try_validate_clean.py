@@ -11,6 +11,7 @@ assert cleaned[0] == {
     "amount": 12.50,
     "category": "food",
     "description": "Tesco meal deal",
+    "merchant": "Tesco"
 }
 
 assert cleaned[1] == {
@@ -18,6 +19,7 @@ assert cleaned[1] == {
     "amount": 2.80,
     "category": "transport",
     "description": "Bus fare",
+    "merchant": "First-bus"
 }
 
 assert cleaned[2] == {
@@ -25,6 +27,8 @@ assert cleaned[2] == {
     "amount": 35.00,
     "category": "bills",
     "description": "Phone bill",
+    "merchant": "Tesco"
+    
 }
 
 print("\n✅ Playground checks passed!")

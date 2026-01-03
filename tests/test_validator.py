@@ -8,6 +8,7 @@ def test_validate_and_clean_keeps_valid_and_normalizes():
             "amount": "12.5",
             "category": " Food ",
             "description": " Tesco ",
+             "merchant": "Tesco"
         }
     ]
 
@@ -19,6 +20,7 @@ def test_validate_and_clean_keeps_valid_and_normalizes():
     assert t["amount"] == 12.5
     assert t["category"] == "food"
     assert t["description"] == "Tesco"
+    assert t["merchant"] == "Tesco"
 
 
 def test_validate_and_clean_drops_missing_keys():
@@ -47,7 +49,7 @@ def test_validate_and_clean_drops_bad_date_format():
 
 def test_validate_and_clean_rounds_amount_to_2dp():
     raw = [
-        {"date": "2025-12-01", "amount": 10.129, "category": "food", "description": "x"},
+        {"date": "2025-12-01", "amount": 10.129, "category": "food", "description": "x",  "merchant": "Tesco"},
     ]
     cleaned = validate_and_clean(raw)
     assert cleaned[0]["amount"] == 10.13
