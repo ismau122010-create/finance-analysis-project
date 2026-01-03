@@ -3,7 +3,7 @@ from typing import Any
 
 REQUIRED_KEYS = {"date", "amount","category", "description"}
 
-def _is_valid_date(date_str: str) -> bool:
+def _is_valid_date(date_str):
     try:
         datetime.strptime(date_str, "%Y-%m-%d")
         return True
@@ -11,8 +11,8 @@ def _is_valid_date(date_str: str) -> bool:
         return False
     
 
-def validate_and_clean(transactions: list[dict[str, Any]]) -> list[dict[str,Any]]:
-    cleaned: list[dict[str,Any]] = []
+def validate_and_clean(transactions):
+    cleaned = []
 
 
     for t  in transactions:

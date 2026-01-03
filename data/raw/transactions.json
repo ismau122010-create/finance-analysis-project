@@ -3,18 +3,21 @@
     "date": "2025-12-01",
     "amount": 12.50,
     "category": "food",
-    "description": "Tesco meal deal"
+    "description": "Tesco meal deal",
+    "merchant": "Tesco"
   },
   {
     "date": "2025-12-02",
     "amount": 2.80,
     "category": "transport",
-    "description": "Bus fare"
+    "description": "Bus fare",
+    "merchant": "First-bus"
   },
   {
     "date": "2025-12-02",
     "amount": 35.00,
     "category": "bills",
-    "description": "Phone bill"
-  }
+    "description": "Phone bill",
+     "merchant": "Tesco" 
+    }
 ]

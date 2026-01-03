@@ -5,7 +5,7 @@ from src.config import cleaned_transactions
 from src.config import (
     cleaned_transactions,
     monthly_summary,
-    category_breakdown,
+    
 )
 
 from src.analysis.aggregations import monthly_totals, category_totals
@@ -25,12 +25,12 @@ def main() -> None:
 
     # analyse
     monthly = monthly_totals(cleaned)
-    categories = category_totals(cleaned)
+    
 
   
   # 5) Export reports (JSON)
     export_json(monthly, monthly_summary)
-    export_json(categories, category_breakdown)
+   
 
 
 
@@ -38,7 +38,7 @@ def main() -> None:
     print(f"cleaned: {len(cleaned)} transactions")
     print(f"svaled cleaned file to : {cleaned_transactions}")
     print(f"saved monthly summary: {monthly_summary}")
-    print(f"saved category breakdown: {category_breakdown}")
+   
 
 if __name__ == "__main__":
     main()    
